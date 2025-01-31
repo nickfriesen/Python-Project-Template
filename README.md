@@ -1,6 +1,5 @@
 # Python-Project-Template
-This repository serves as a template for new Python projects. The idea behind the template is to simplify the process of setting up a new Python project with the help of a Makefile.
-The Makefile can be adjusted by changing the repective components of the file. A new project structure can be created by calling the `make prepare` command.
+This repository serves as a template for new Python projects. The idea behind the template is to simplify the process of setting up a new Python project with the help of a Makefile. The Makefile can be adjusted by changing the repective components of the file.
 
 
 # Makefile components
@@ -15,16 +14,11 @@ The first lines of the Makefile declare some variables that are used throughout 
 
 **PIP**: The `PIP` variable holds the path to the pip installation in the virtual environment.
 
-
 ## Make commands
-**structure**: The `make structure` command will create *src* and *tests* directories - including one `__init__.py` file each.
-
 **install**: The `make install` command will:
     1. Create a virtual environment named according to the `VENV` variable,
     2. Upgrade pip, and
     3. Install the dependencies from the `requirements.txt` file (see below for more infromation).
-
-**prepare**: The `make prepare` command combines the `structure` and `install` commands.
 
 **format**: The `make format` command formats the code using the *black* formatter.
 
@@ -51,8 +45,7 @@ and their respective dependencies.
 
 # Usage
 The intended usage is as following:
-1. When starting a new Python project, the `make prepare` command should be run to create the project structure, create the virtual envirnoment, and install all the necessary dependencies.
-> *Note*: This command should only be run once at the beginning of the project.
+1. When starting a new Python project, the `make install` command should be run to create the virtual envirnoment and install all the necessary dependencies.
 
 2. The command `source .venv/bin/activate` should be run to activate the virtual environment in the shell.
 
